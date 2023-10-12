@@ -32,8 +32,12 @@ if (isPalindrome(userWord)) {
 
 // PARI O DISPARI 
 
+// utente sceglie pari o dispari
+const oddOrEven = prompt("Scegli pari o dispari");
+console.log("hai scelto " + oddOrEven);
+
 // utente inserisce un numero da 1 a 5 che salvo in una variabile
-const userNum = parseInt(prompt("Scegli pari o dispari e poi inserisci un numero da 1 a 5"));
+const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log("hai scelto " + userNum);
 
 // creo una piccola funzione che sceglie per il pc un numero random da 1 a 5
@@ -52,9 +56,11 @@ console.log ("la somma dei due numeri è " + numSum);
 // creo una funzione che mi restituisce vero se la somma è pari e falso se è dispari
 function isEven() {
   //  SE la somma dei due numeri è pari allora restituisci vero
-  if (numSum % 2 === 0) {
+  if (numSum % 2 === 0 && oddOrEven === "pari") {
     return true;
   // ALTRIMENTI restituisci falso
+  } else if (numSum % 2 !== 0 && oddOrEven === "dispari") {
+    return true;
   } else {
     return false;
   }
@@ -62,7 +68,7 @@ function isEven() {
 
 // stampo il vincitore
 if (isEven(numSum)) {
-  console.log("Se hai scelto pari hai vinto! Se hai scelto dispari invece hai perso!")
+  console.log("Hai vinto!");
 } else {
-  console.log("Se hai scelto pari hai perso! Se hai scelto dispari invece hai vinto!")
+  console.log("Ha vinto il computer!");
 }
