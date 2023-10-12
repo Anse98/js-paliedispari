@@ -20,6 +20,8 @@
 
 # PARI O DISPARI
 
+## utente sceglie pari o dispari
+
 ## utente inserisce un numero da 1 a 5 che salvo in una variabile
 
 ## creo una piccola funzione che sceglie per il pc un numero random da 1 a 5
@@ -30,7 +32,9 @@
 
 ## creo una funzione che mi restituisce vero se la somma è pari e falso se è dispari
 
-  - SE la somma dei due numeri è pari allora restituisci vero
+  - SE la somma dei due numeri è pari e utente aveva scelto pari allora restituisci vero 
+
+  - ALTRIMENTI SE l'utente aveva scelto dispari e la somma è dispari restituisci sempre vero
 
   - ALTRIMENTI restituisci falso
 ## stampo il vincitore

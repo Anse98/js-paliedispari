@@ -4,9 +4,11 @@
 const userWord = prompt("Inserisci una parola e ti dico se è palindroma");
 
 // ## Creare una funzione per capire se la parola inserita è palindroma
-function isPalindrome() {
+function isPalindrome(userWordChoice) {
+
   // Divido la parola in un array di caratteri
-  let diviseWord = userWord.split("");
+  let diviseWord = userWordChoice.split("");
+
 
   // Inverto i caratteri dell'array
   diviseWord = diviseWord.reverse();
@@ -17,6 +19,7 @@ function isPalindrome() {
   // SE la parola inserita dall'utente è uguale al suo contrario allora è palindroma
   if (userWord === invertedWord) {
     return true;
+
   // ALTRIMENTI non è palindroma
   } else {
     return false;
@@ -54,13 +57,14 @@ const numSum = userNum + pcNum;
 console.log ("la somma dei due numeri è " + numSum);
 
 // creo una funzione che mi restituisce vero se la somma è pari e falso se è dispari
-function isEven() {
-  //  SE la somma dei due numeri è pari allora restituisci vero
-  if (numSum % 2 === 0 && oddOrEven === "pari") {
+function isEven(sum) {
+  //  SE la somma dei due numeri è pari e utente aveva scelto pari allora restituisci vero 
+  if (sum % 2 === 0 && oddOrEven === "pari") {
+    return true;
+  // ALTRIMENTI SE l'utente aveva scelto dispari e la somma è dispari restituisci sempre vero
+  } else if (sum % 2 !== 0 && oddOrEven === "dispari") {
     return true;
   // ALTRIMENTI restituisci falso
-  } else if (numSum % 2 !== 0 && oddOrEven === "dispari") {
-    return true;
   } else {
     return false;
   }
@@ -72,3 +76,10 @@ if (isEven(numSum)) {
 } else {
   console.log("Ha vinto il computer!");
 }
+
+
+function somma(addendo1, addendo2) {
+  return addendo1 + addendo2;
+}
+
+console.log(somma(5, 3));
